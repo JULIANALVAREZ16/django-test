@@ -1,0 +1,73 @@
+
+{% extends 'parqueadero/menu.html' %}
+{% load static %}
+<html lang="es">
+
+{%load static%}
+{% block content %}   
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="shortcut icon" href='{% static "img/logo1.png" %}' type="image/x-icon">
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/estilo-retro.css" %}'>
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/about.css" %}'>
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/container.css" %}'>
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/col.css" %}'>
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/image.css" %}'>
+    </head>
+  <body>
+
+    <div class="about">
+      <div class="container">
+        <div class="row d_flex">
+          <div class="col-md-5">
+            <div class="about_img">
+              <figure>
+                <img src='{% static "img/centro.jpg" %}' alt="#" />
+              </figure>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="titlepage">
+              <h2>Universidad CESMAG Centro </h2>
+              <p>Dirección:Cra. 20a # 14-54, Pasto, Nariño</p>
+              <p>Telefono:7244434</p>
+              <p>Fundador: Fray Guillermo de Castellana</p>
+              <p>Lema: Hombres nuevos para tiempos nuevos</p>
+              
+            </div>
+            <a class="read_more" href="estacion-centro">Estaciones</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-5">
+               <div class="shop_img">
+                  <figure><img src='{% static "img/san_damian.jpg" %}' alt="#"></figure>
+               </div>
+            </div>
+            <div class="col-md-7 padding_right0">
+               <div class="max_width">
+                  <div class="titlepage">
+                     <h2>Universidad CESMAG San Damian</h2>
+                     <p>Dirección: Catambuco Kilometro 5, Catambuco, Pasto, Nariño</p>
+                     <p>Telefono: 7244434</p>
+                  </div>
+               </div>
+               <a class="read_more" href='estacion-damian'>Estaciones</a>
+            </div>
+         </div>
+      </div>
+   </div>
+
+  </body>
+  {% endblock %} 
+</html>

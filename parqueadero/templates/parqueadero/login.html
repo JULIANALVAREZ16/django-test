@@ -1,0 +1,104 @@
+{% extends 'parqueadero/home.html' %} {% load static %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<body>
+  {% block content %}
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión</title>
+    <link
+      rel="shortcut icon"
+      href='{% static "img/logo1.png" %}'
+      type="image/x-icon"
+    />
+    {% comment %}
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href='{% static "estilo/estilo.css" %}'
+    />
+    {% endcomment %}
+  </head>
+  <center>
+    <div class="contact">
+      <form action="loguin" method="post">
+        <div class="container">
+          <div class="col-md-6">
+            <h1>Iniciar sesión</h1>
+            {% csrf_token %} 
+            {% comment %} {{form.as_p}} {% endcomment %}
+            <label>Email</label><br>
+            {{form.email}}<br>
+            <label>Contraseña</label><br>
+            {{form.password}}
+            
+            <button>Ingresar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </center>
+</body>
+{% if error_messages %}
+<script>
+  // Ejemplo de uso de SweetAlert2
+  Swal.fire({
+    title: "¡Error!",
+    html: "<strong>{{ error_messages }}</strong>",
+    icon: "error",
+    confirmButtonText: "Aceptar",
+  });
+  const registroForm = document.getElementById("registro-form");
+
+  // Agregar un evento de envío al formulario
+  registroForm.addEventListener("submit", function (event) {
+    // Limpiar los valores de los campos después de enviar el formulario
+    registroForm.reset();
+  });
+</script>
+
+{% endif %} {% endblock %}
+
+<!-- <html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="shortcut icon" href='{% static "img/logo1.png" %}' type="image/x-icon">
+    <link type = 'text/css' rel="stylesheet" href='{% static "estilo/estilo.css" %}'>
+
+</head>
+
+<body>
+    
+    &nbsp;&nbsp;
+    <center>
+        <font>
+            <form name="login_form" action="login" method="POST">
+                <center>
+                    <h1>
+                        <font>Iniciar Sesión</font>
+                    </h1>
+                </center><br><br>
+                {% csrf_token %}
+                <img type = "img" src = '{% static "img/logo1.png" %}' width= "90" height="120"><br><br>
+                <label> E-mail:</label><br>
+                <input type="Email" class="input_email" placeholder = "email@gmail.com" name = "email" required><br>
+                <label>Password</label><br>
+                <input type="password" placeholder = "************" name = "password" required><br><br>
+                <input type="submit" value="Ingresar" required><br><br>
+                <a href="home">¿Olvidaste tu contraseña?</a>
+                <div>
+                    <a href="register">Registrarse</a><br><br>
+                </div>
+            </form>
+        </font>
+    </center>
+</body>
+
+</html> -->

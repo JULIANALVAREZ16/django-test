@@ -1,0 +1,201 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: #031321; */
+    font-family: consolas;
+    background: #031321;
+    background: -webkit-linear-gradient(to right, #112652, #28427e);
+    background: linear-gradient(to right, #112652, #28427e);
+}
+
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    Letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 15px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+}
+
+a sanp {
+    position: absolute;
+    display: block;
+}
+
+a:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.4s;
+}
+
+input {
+    position: relative;
+    display: inline-block;
+    padding: 8px 60px;
+    color: #2196f3;
+    text-transform: none;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+}
+
+input sanp {
+    position: absolute;
+    display: block;
+}
+
+
+input:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.4s;
+}
+
+.input_email {
+    position: relative;
+    display: inline-block;
+    padding: 8px 60px;
+    color: #2196f3;
+    text-transform: lowercase;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+}
+
+.select {
+    position: relative;
+    display: inline-block;
+    padding: 8px 60px;
+    color: #072a47;
+    text-transform: capitalize;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+}
+
+.select:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.4s;
+}
+
+p {
+    position: relative;
+
+    padding: 8px 60px;
+    color: #2196f3;
+    text-transform: none;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+}
+
+form {
+    color: #FFFFE4B5;
+    height: 520xp;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: .6em;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+form * {
+    font-family: 'popins', sans-serif;
+    color: -webkit-linear-gradient(to right, #c2e59c, #64b3f4);
+    color: linear-gradient(to right, #c2e59c, #64b3f4);
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+.input-submit {
+    position: relative;
+    display: inline-block;
+    padding: 8px 60px;
+    color: #01070c;
+    text-transform: none;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+    transform: scaleX(1);
+}
+
+input-submit sanp {
+    position: absolute;
+    display: block;
+}
+
+
+input-submit:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.4s;
+}
+
+font {
+    color: #FFFFE4B5
+}
+
+img {
+    margin: 10px;
+    border: 80px;
+    border-radius: 70px 70px;
+}
+
+h1 {
+    color: #FFFFE4B5;
+}
+
+form.id_programa {
+    position: relative;
+    display: inline-block;
+    padding: 8px 60px;
+    color: #072a47;
+    text-transform: capitalize;
+    Letter-spacing: 2px;
+    text-decoration: none;
+    font-size: 13px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: .6em;
+}
+
+form.id_programa:hover {
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 0.4s;
+}

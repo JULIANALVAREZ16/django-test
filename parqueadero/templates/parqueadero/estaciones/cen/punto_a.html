@@ -1,0 +1,25 @@
+
+{% extends 'parqueadero/menu.html' %}
+{% load static %}
+<html lang="es">
+
+{%load static%}
+{% block content %}   
+
+
+    <div class="about">
+      <div class="container">
+       <h1>Estacion A</h1>
+
+       <div class="estacion">
+        
+        {% for punto in puntos %}
+            <button><a href="/punto/{{punto.id_punto}}" style="color: #FFFFFF">Punto {{punto.codigo_punto}}</a></button>
+        {%endfor%}
+       </div>
+      </div>
+    </div>
+
+    
+  {% endblock %} 
+</html>

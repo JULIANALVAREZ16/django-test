@@ -1,0 +1,28 @@
+{% extends 'parqueadero/menu.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  {% block content %}
+  <body>
+    <center>
+      <br><br>
+      <h1>Bienvenido a mi cuenta</h1>
+      
+      <h2>Información del Usuario</h2>
+      <p>Nombre: {{ usuario.nombre }}</p>
+      <p>Apellido: {{ usuario.apellido }}</p>
+      <p>Email: {{ usuario.email }}</p>
+      <p>Código: {{ usuario.código }}</p>
+
+      {% if parkine != None %}
+      <button>Contraseña {{parkine.password}}</button>
+      {% endif %}
+      
+    </center>
+  </body>
+  {% endblock %}
+</html>

@@ -1,0 +1,21 @@
+
+{% extends 'parqueadero/menu.html' %}
+{% load static %}
+<html lang="es">
+
+{%load static%}
+{% block content %}   
+
+
+    <div class="about">
+      <div class="container">
+       <h1>Punto {{punto.codigo_punto}}</h1>
+
+        <button>Contraseña {{parkine.password}}</button>
+       
+      </div>
+    </div>
+
+    
+  {% endblock %} 
+</html>

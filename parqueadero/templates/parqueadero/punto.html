@@ -1,0 +1,25 @@
+
+{% extends 'parqueadero/menu.html' %}
+{% load static %}
+<html lang="es">
+
+{%load static%}
+{% block content %}   
+
+
+    <div class="about">
+      <div class="container">
+       <h1>Punto {{punto.codigo_punto}}</h1>
+
+       <div class="estacion">
+          <form action="/punto/{{punto.id_punto}}" method="post">
+            {% csrf_token %} 
+            <button>Generar codigo</button>
+          </form>
+       </div>
+      </div>
+    </div>
+
+    
+  {% endblock %} 
+</html>

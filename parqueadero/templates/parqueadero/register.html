@@ -1,0 +1,73 @@
+{% extends 'parqueadero/menu.html' %}
+{% comment %}
+
+{% endcomment %}
+{% block content %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="shortcut icon" href='{% static "img/logo1.png" %}' type="image/x-icon" />
+    <!-- <link type="text/css" rel="stylesheet" href='{% static "estilo/estilo.css" %}' /> -->
+</head>
+
+<body>
+    <center>
+        {% csrf_token %}
+        <div class="contact">
+            <form method="post">
+                <div class="container">
+                    <div class="col-md-6">
+                        <h1>Registro</h1>
+
+                        {% csrf_token %}
+                        <label> Nombres:</label><br>
+                        {{form.nombre}}<br>
+                        <label> Apellidos:</label><br>
+                        {{form.apellido}}<br>
+                        <label> Código:</label><br>
+                        {{form.codigo}}<br>
+                        <label> Identificación:</label><br>
+                        {{form.identificacion}}<br>
+                        <label> Email:</label><br>
+                        {{form.email}}<br>
+                        <div class="col-md-12x">
+                            <label> Contraseña:</label><br>
+                            {{form.password}}<br><br>
+                        </div>
+                        <div class="col-md-12x">
+                            <label> Programa:</label><br>
+                            {{form.id_programa}}<br><br>
+                        </div>
+                        <button class="send_btn"> Registrarse</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </center>
+    {% if error_message %}
+    <script>
+        Swal.fire({
+            title: "¡Error!",
+            html: "<strong>{{ error_message }}</strong>",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+        });
+    </script>
+
+
+    {% endif %}
+</body>
+
+{% endblock %}
+
+
+</html>
