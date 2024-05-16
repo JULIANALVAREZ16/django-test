@@ -198,6 +198,8 @@ def liberar(request, id):
 
         punto.estado = True,
 
+        punto.save()
+
         return HttpResponse(status=200)
 
     except:
