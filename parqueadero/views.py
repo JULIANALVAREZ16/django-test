@@ -193,7 +193,7 @@ def validar_punto(request, id, password):
 def liberar(request, id):
     try:
         punto = Punto.objects.get(id_punto = id)
-        punto.estado = True,
+        punto.estado = True
         punto.save()
         
         Parkine.objects.filter(id_punto = punto).delete()
