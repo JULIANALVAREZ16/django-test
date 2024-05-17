@@ -149,7 +149,7 @@ def punto(request, id):
         if (parkine != None):
             return render(request, 'parqueadero/parkine_error.html')
 
-        list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "A", "B", "C", "D"]
+        list = ["1", "2", "4", "5","7", "8", "9", "0", "A", "B", "C", "D"]
         password = ""
 
         while (len(password) != 6):
